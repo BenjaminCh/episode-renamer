@@ -56,7 +56,7 @@ def search_show(name, site):
 
 def parse_imdbapi(show_id, options):
     """Get the episodes from imdbapi."""
-    url = 'http://imdbapi.poromenos.org/json/?name=%s' % urllib.quote(show_id)
+    url = 'http://imdbapi.poromenos.org/js/?name=%s' % urllib.quote(show_id)
     if options.year:
         url += '&year=%s' % urllib.quote(options.year)
     results = json.load(urllib2.urlopen(url))
